@@ -1,11 +1,24 @@
-n= int(input("n의 값을 입력하시오"))
-for i in range(n):
-    s=input()
-    s.upper()
-    size=len(s)
-    for j in range(size//2): #이 부분에 주목-->문자열의 개수가 홀수일 경우에 그냥 가운데 문자는 무시하면 됨!
-        if s[j]!=s[-1-j]:
-            print("NO")
-            break
+N = int(input())#
+budgets = list(map(int, input().split()))
+M = int(input())
+
+left = 0
+right = max(budgets)
+print("right=",right)
+result = 0
+while right >= left:
+    mid = (left + right) // 2
+    answer = 0
+    for budget in budgets:
+        if budget > mid:
+            answer += mid
+        else:
+            answer += budget
+
+    # answer: 내가 책정한 총 예산, M: 최대 예산
+    if answer > M:
+        right = mid - 1
     else:
-        print("yes")
+        left = mid + 1
+        result = max(result, answer)
+print(right)
