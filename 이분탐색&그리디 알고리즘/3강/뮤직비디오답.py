@@ -14,13 +14,14 @@ def count(capacity):
 
 n,m=map(int, input().split())
 Music=list(map(int, input().split()))
+maxx=max(Music)
 
 lt=1
 rt=sum(Music)
 res=0
 while lt<=rt:
     mid=(lt+rt)//2
-    if count(mid)<=m:
+    if mid>=maxx and count(mid)<=m:
         res=mid
         rt=mid-1
     else:
