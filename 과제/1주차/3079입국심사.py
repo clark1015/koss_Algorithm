@@ -1,22 +1,22 @@
-def count(time):
-    cnt=0
+def count(time: int):
+    cnt:int=0
     for i in range(n):
         cnt+=time//T[i]
 
     return cnt
-T=[]    
+T = []    
 n,m=map(int, input().split())
 for p in range(n):
     k=int(input())
     T.append(k)
 
-lt=1
-rt=max(T)*m
+lt: int=1
+rt: int=max(T)*m
 
 while lt<=rt:
-    mid=(lt+rt)//2
+    mid: int=(lt+rt)//2
     if count(mid)>=m:
-        res=mid
+        res: int=mid
         rt=mid-1
     else:
         lt=mid+1
