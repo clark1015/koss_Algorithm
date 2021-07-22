@@ -1,10 +1,9 @@
 import sys
-#sys.stdin=open("input.txt","r")
 a=input()
 stack=[]
 res=''
 for x in a:
-    if x.isdecimal():
+    if x.isalpha():
         res+=x
     else:
         if x=="(":
