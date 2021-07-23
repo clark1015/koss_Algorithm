@@ -1,2 +1,2 @@
-a=[1,2,3]
-print(a.top())
+n=input().split()
+print(n[0])
