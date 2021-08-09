@@ -1,4 +1,4 @@
-clark={'a':('b','c')}
-clark['c']=('k','d')
-print(clark['a'])
-print(clark)
+def post_order(start, end):
+    if start>end:
+        return
+    root=pre_order
