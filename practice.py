@@ -1,4 +1,2 @@
-def post_order(start, end):
-    if start>end:
-        return
-    root=pre_order
+num_set=list(map(int,input().split()))
+print(num_set)
