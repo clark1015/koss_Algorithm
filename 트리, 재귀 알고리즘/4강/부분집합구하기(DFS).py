@@ -1,7 +1,5 @@
 def DFS(v):
     if v==n+1:
-        print(ch)
-        print()
         for i in range(1,n+1):
             if ch[i]==1:
                 print(i, end=' ')
