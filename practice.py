@@ -1,2 +1,4 @@
-num_set=list(map(int,input().split()))
-print(num_set)
+a=[1,2,3]
+a+=[4]
+
+print(a)
