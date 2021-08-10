@@ -4,10 +4,6 @@ from collections import deque
 def DFS(L, sum, tsum):
     global result
     if sum+(total-tsum)<result:
-        #시간 초과를 해결하기 위한 코드
-        #불필요한 지점 커팅 코드
-        #여태까지의 sum(합계)에서 나머지 노드들을 모두 더해도 
-        #result값보다 작다면 더이상의 계산은 불필요하기에 cut
         return
     if sum>c:
         return
