@@ -1,37 +1,22 @@
-class Node:
-    def __init__(self, item):
-        self.data=item
-        self.left=None
-        self.right=None
-    
-    def size(self):
-        if self.left:
-            l=self.left.size()
-        else:
-            l=0
-        if self.right:
-            r=self.right.size()
-        else:
-            r=0
-        return l+r+1
-    
-    def inorder(self):
-        traversal=[]
-        if self.left:
-            traversal+=self.left.inorder()
-        traversal.append(self.data)
-        if self.right:
-            traversal+=self.right.inorder()
-        return traversal
+def DFS(v):
+    global cnt
+    if v==m:
+        cnt+=1
+        for j in range(m):
+            print(res[j], end=' ')
+        print()
+    else:
+        for i in range(1,n+1):
+            if ch[i]==0:
+                ch[i]=1
+                res[v]=i
+                DFS(v+1)
+                ch[i]=0
 
-class BinaryTree:
-    def __init__(self, r):
-        self.root = r
-    
-    def size(self):
-        if self.root:
-            return self.root.size()
-        else:
-            return 0
-
-        
+if __name__=="__main__":
+    n,m=map(int, input().split())
+    cnt=0
+    ch=[0]*(n+1)
+    res=[0]*n
+    DFS(0)
+    print(cnt)
