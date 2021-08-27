@@ -7,6 +7,7 @@ def DFS(y,x):
             DFS(y,x+1)
         elif g[y+1][x]==0:
             DFS(y+1,x)
+        return cnt
 
             
 
@@ -26,5 +27,6 @@ if __name__=="__main__":
         print()
     d = [(-1, 0), (1, 0), (0, -1), (0, 1)]
     cnt=1
-    DFS(1,1)
-    print(cnt)
+    for i in range(1,n+1):
+        for j in range(1, m+1):
+            DFS(i,j)
