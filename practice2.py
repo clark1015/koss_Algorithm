@@ -1,17 +1,10 @@
-word=input()
-bomb=input()
-stack=[]
+cnt=0
 
-for i in word:
-    if stack and stack[-1]==bomb[-1]:
-        for k in range(1,len(bomb)):
-            if stack[-k]==bomb[-k]:
-                pass
-            else:
-                break
-        else:
-            for k in range(len(bomb)-1):
-                stack.pop()
-    else:
-        stack.append(i)
-print(stack)
+for i in range(10):
+    for j in range(5):
+        print(j, end=' ')
+        cnt+=1
+        if cnt==1:
+            break
+       
+    print()
