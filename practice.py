@@ -1,12 +1,19 @@
 n=int(input())
 height=list(map(int,input().split()))
 tower_count=len(height)
+stack=[]
+res=[]
 
-for i in range(len(height)):
-    for j in range(i):
-        if j!=0 and height[-tower_count+j]>height[i]:
-            print(len(height)+1-tower_count+j, end=' ' )
+for i in range(tower_count):
+    k=height[i]
+    stack.append(height[i])
+    for j in range(-len(stack),-1):
+        if stack[j]>k:
+            print(tower_count+j)
+            res.append(tower_count+j)
             break
-        else:
-            print(0, end=' ')
+    else:
+        res.append(0)
 
+
+print(res)
