@@ -14,5 +14,6 @@ while True:
         rt=mid-1
 
     elif num_list[mid]==m:
+        print("wowowo " ,num_list[mid])
         print(mid+1)
         break
