@@ -8,7 +8,7 @@ def count(capacity):
             sum=i
             cnt+=1
         else:
-            sum+=i
+            sum += i
     return cnt
 
 
